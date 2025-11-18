@@ -6,6 +6,24 @@
   <title>Samaa Hediya – Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  // Select all project cards
+  const faders = document.querySelectorAll('.project-card');
+
+  function checkFade() {
+    faders.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      // If the top of element is visible in the window
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add('show'); // Add class to trigger CSS transition
+      }
+    });
+  }
+
+  // Run on page load and when scrolling
+  window.addEventListener('scroll', checkFade);
+  window.addEventListener('load', checkFade);
+</script>
 
 <body>
 
