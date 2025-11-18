@@ -1,26 +1,11 @@
+/* GENERAL STYLE */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: #f0f6ff;
   color: #333;
-}
-
-header {
-  background: #2d2d2d;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 32px;
-}
-
-header p {
-  margin-top: 10px;
-  font-size: 16px;
 }
 
 section {
@@ -30,56 +15,124 @@ section {
   background: white;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 h2 {
-  border-left: 5px solid #2d2d2d;
+  border-left: 5px solid #5a8dee;
   padding-left: 10px;
+  color: #2d4b8e;
 }
 
-.project-card {
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #fafafa;
-  border-radius: 8px;
-  border: 1px solid #e1e1e1;
+/* NAVIGATION BAR */
+
+nav {
+  background: #5a8dee;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.project-card h3 {
-  margin-top: 0;
+nav .logo {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-a {
-  color: #0055cc;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
   text-decoration: none;
+  font-size: 15px;
 }
 
-a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
 
-.skills ul {
-  padding-left: 20px;
+/* HERO SECTION */
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: #e7efff;
+  color: #2d4b8e;
 }
 
-.resume-btn {
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* PROJECT CARDS */
+
+.project-card {
+  background: #f3f7ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #d8e1ff;
+}
+
+.project-btn {
   display: inline-block;
   margin-top: 10px;
-  background: #2d2d2d;
+  background: #5a8dee;
   color: white;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border-radius: 6px;
   text-decoration: none;
 }
 
-.resume-btn:hover {
-  background: #444;
+.project-btn:hover {
+  background: #3d6edc;
 }
+
+/* SKILLS */
+
+#skills ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* RESUME BUTTON */
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #2d4b8e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resume-btn:hover {
+  background: #1e3570;
+}
+
+/* FOOTER */
 
 footer {
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
   color: #555;
+  font-size: 14px;
 }
