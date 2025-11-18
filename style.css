@@ -1,5 +1,4 @@
 /* GENERAL STYLE */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -24,45 +23,7 @@ h2 {
   color: #2d4b8e;
 }
 
-/* NAVIGATION BAR */
-
-nav {
-  background: #5a8dee;
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav .logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
 /* HERO SECTION */
-
 header {
   text-align: center;
   padding: 50px 20px;
@@ -81,13 +42,20 @@ header p {
 }
 
 /* PROJECT CARDS */
-
 .project-card {
   background: #f3f7ff;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
   border: 1px solid #d8e1ff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-btn {
@@ -98,6 +66,7 @@ header p {
   padding: 8px 15px;
   border-radius: 6px;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
 .project-btn:hover {
@@ -105,14 +74,12 @@ header p {
 }
 
 /* SKILLS */
-
 #skills ul {
   padding-left: 20px;
   line-height: 1.8;
 }
 
 /* RESUME BUTTON */
-
 .resume-btn {
   display: inline-block;
   margin-top: 10px;
@@ -122,6 +89,7 @@ header p {
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s;
 }
 
 .resume-btn:hover {
@@ -129,28 +97,9 @@ header p {
 }
 
 /* FOOTER */
-
 footer {
   text-align: center;
   padding: 20px;
   color: #555;
   font-size: 14px;
 }
-
-<script>
-  // Fade-in on scroll
-  const faders = document.querySelectorAll('.fade');
-
-  function checkFade() {
-    faders.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 50) {
-        el.classList.add('show');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', checkFade);
-  window.addEventListener('load', checkFade);
-</script>
-
